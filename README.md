@@ -2,7 +2,10 @@
 1. [Install via NPM](#npm)
 1. [Install via CDN](#cdn)
 1. [Component events](#events)
+1. [Component response](#response)
 1. [Component attributes](#attributes)
+
+---
 
 <a name="npm"></a>
 ## Install via NPM
@@ -56,7 +59,8 @@ Example:
 </html>
 ```
 
-Enjoy!
+An example can be found in the ```npm``` folder
+
 <a name="cdn"></a>
 ## Install via CDN
 
@@ -70,7 +74,8 @@ Example:
 
 Add the name of the component to the html, as in the example above.
 
-Enjoy!
+An example can be found in the ```cdn``` folder
+
 <a name="events"></a>
 ## Component events
 
@@ -86,6 +91,26 @@ Example:
 const component = document.getElementsByTagName('face-capture-wc')[0];
 
 component.addEventListener('face-capture', () => alert('Event!'));
+```
+
+<a name="response"></a>
+## Component response
+
+You can get the response of the component in the ```detail``` field of the event object.
+
+Example:
+
+```javascript
+const component = document.getElementsByTagName('face-capture-wc')[0];
+
+function listener(event) {
+    if (event.detail) {
+        const response = event.detail;
+        console.log(response);
+    }
+}
+
+component.addEventListener('face-capture', listener);
 ```
 
 <a name="attributes"></a>
