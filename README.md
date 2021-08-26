@@ -49,6 +49,7 @@ In ```index.html``` connect ```index.js``` and add the name of the component you
 1. ```<face-capture-wc></face-capture-wc>``` - for create a face snapshot;
 1. ```<face-liveness-wc></face-liveness-wc>``` - for liveness verification;
 1. ```<document-reader-wc></document-reader-wc>``` - for documents recognition.
+1. ```<camera-capture-wc></camera-capture-wc>``` - to capture images from the camera and gallery.
 
 ### Adding to an existing project:
 
